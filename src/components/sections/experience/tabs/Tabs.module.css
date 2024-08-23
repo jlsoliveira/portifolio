@@ -1,0 +1,22 @@
+.tabs {
+  @apply flex md:flex-row flex-col space-x-6;
+  .tabs_titles {
+    @apply flex md:flex-col flex-row md:w-2/5 mb-8 overflow-scroll md:overflow-visible;
+  }
+  .tabs_body {
+    @apply mt-0 text-base text-zinc-800;
+    .tabs_body_title {
+      @apply text-primary-100 text-2xl mb-3 pb-2 relative;
+      &::after {
+        @apply absolute w-9 h-[2px] bg-secondary bottom-0 left-0;
+        content: ' ';
+      }
+    }
+    .tabs_body_role {
+      @apply flex text-zinc-500;
+    }
+    .tabs_body_date {
+      @apply text-zinc-500 mb-5 relative;
+    }
+  }
+}

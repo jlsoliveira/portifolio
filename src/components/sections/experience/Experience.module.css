@@ -1,0 +1,13 @@
+.experience {
+  @apply bg-zinc-100;
+  .experience_container {
+    @apply xl:w-[80%] px-4 xl:px-0  py-28 w-full mx-auto text-xl relative;
+  }
+  .experience_title {
+    @apply text-primary-100 font-thin text-center w-fit mx-auto text-5xl relative pb-3 md:mb-20 mb-12;
+    &::after {
+      @apply absolute bottom-0 w-10 h-1 bg-secondary left-[36%];
+      content: ' ';
+    }
+  }
+}

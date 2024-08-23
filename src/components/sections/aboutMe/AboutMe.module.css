@@ -1,0 +1,16 @@
+.about {
+  @apply py-24;
+  .about_container {
+    @apply xl:w-[80%] px-4 xl:px-0 w-full mx-auto text-xl relative flex flex-wrap lg:flex-nowrap items-center lg:space-x-36;
+    .about_text {
+      @apply flex flex-col space-y-8 text-gray-500;
+      .about_text_title {
+        @apply text-primary-100 font-medium relative pb-3 mt-3;
+        &::after {
+          @apply absolute bottom-0 w-10 h-1 bg-secondary left-0;
+          content: ' ';
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.banner {
+  @apply bg-banner h-[894px] relative bg-no-repeat bg-right bg-cover;
+  &::after {
+    @apply h-full w-full bg-banner absolute top-0;
+    content: ' ';
+  }
+  .banner_container {
+    @apply xl:w-[80%] px-4 xl:px-0 w-full mx-auto text-white text-xl relative z-10 flex items-center h-full;
+    .banner_container_text {
+      @apply xl:w-[662px];
+      .banner_container_text_tag {
+        @apply text-secondary;
+      }
+      .banner_container_text_name {
+        @apply text-4xl mb-10;
+        .banner_container_text_name_content {
+          @apply sm:flex w-fit;
+          .banner_container_text_role {
+            @apply relative overflow-hidden whitespace-nowrap border-r-2 border-secondary sm:ml-4 text-secondary;
+          }
+        }
+      }
+      .banner_container_text_description {
+        @apply text-zinc-300 mb-12;
+      }
+    }
+  }
+}

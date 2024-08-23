@@ -1,0 +1,42 @@
+.contact {
+  .contact_container {
+    @apply xl:w-[80%] px-4 xl:px-0  py-28 w-full mx-auto text-xl relative;
+    .contact_container_box {
+      @apply md:flex w-full;
+    }
+
+    .contact_info {
+      .contact_info_title {
+        @apply text-primary-100 font-thin w-fit text-4xl relative pb-5 md:mb-14 mb-12;
+        &::after {
+          @apply absolute bottom-0 w-10 h-1 bg-secondary left-0;
+          content: ' ';
+        }
+      }
+      .contact_info_text {
+        @apply flex;
+        .contact_info_text_icon {
+          @apply text-primary-100 mr-4;
+        }
+      }
+      .contact_info_ul {
+        .contact_info_ul_li {
+          @apply mb-5 text-lg;
+        }
+      }
+    }
+
+    .contact_form {
+      @apply bg-white rounded-lg shadow-2xl px-9 py-20 w-full md:w-[696px] mx-auto;
+      .contact_form_label {
+        @apply block text-sm font-medium text-primary-100;
+      }
+      .contact_form_input {
+        @apply mt-1 mb-3 p-2 border border-primary-100 rounded w-full text-sm;
+      }
+      .contact_form_textarea {
+        @apply mt-1 p-2 border border-primary-100 rounded w-full text-sm h-40;
+      }
+    }
+  }
+}

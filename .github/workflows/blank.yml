@@ -40,4 +40,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Example step that uses the environment variable
+      - name: Display variables
+        run: echo "EMAIL_USER Key is: $EMAIL_USER"
+        run: echo "EMAIL_PASS Key is: $EMAIL_PASS"
      

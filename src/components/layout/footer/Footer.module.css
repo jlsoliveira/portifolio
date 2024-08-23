@@ -1,0 +1,9 @@
+.footer {
+  @apply bg-primary-100 px-4 pt-20 pb-6 text-white;
+  .footer_container {
+    @apply w-fit mx-auto text-xl relative flex flex-col justify-center;
+  }
+  .footer_by {
+    @apply text-sm mt-12 text-center flex items-center justify-center space-x-1;
+  }
+}

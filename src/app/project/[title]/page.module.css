@@ -1,0 +1,19 @@
+.project {
+  @apply my-40;
+  .project_container {
+    @apply xl:w-[80%] px-4 xl:px-0 w-full mx-auto text-[16px] relative flex flex-wrap lg:flex-nowrap lg:space-x-36 text-gray-600 font-normal;
+  }
+  .project_title {
+    @apply text-primary-100 font-thin text-center w-fit text-4xl relative pb-3 md:mb-12 mb-12;
+    &::after {
+      @apply absolute bottom-0 w-10 h-1 bg-secondary left-0;
+      content: ' ';
+    }
+  }
+  .project_ul {
+    @apply my-10;
+    .project_ul_item {
+      @apply flex items-center space-x-3 my-5 hover:text-secondary;
+    }
+  }
+}
