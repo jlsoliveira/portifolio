@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,13 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      
+
       # Configure environment variables from secrets
       - name: Set up environment variables
         run: |
           echo "EMAIL_USER=${{ secrets.EMAIL_USER }}" >> $GITHUB_ENV
           echo "EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> $GITHUB_ENV
-          
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
@@ -43,6 +43,6 @@ jobs:
 
       # Example step that uses the environment variable
       - name: Display variables
-        run: echo "EMAIL_USER Key is: $EMAIL_USER"
-        run: echo "EMAIL_PASS Key is: $EMAIL_PASS"
-     
+        run: |
+          echo "EMAIL_USER Key is: $EMAIL_USER"
+          echo "EMAIL_PASS Key is: $EMAIL_PASS"
