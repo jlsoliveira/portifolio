@@ -1,15 +1,16 @@
-import './globals.css';
+import "./globals.css";
 
-import { Footer, Header } from '@/components';
+import { Footer, Header } from "@/components";
 
-import { Inter } from 'next/font/google';
-import type { Metadata } from 'next';
+import { Inter } from "next/font/google";
+import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Johanna Oliveira',
-  description: 'Portifolio Johanna Liz dos Santos de Oliveira',
+  title: "Johanna Oliveira",
+  description: "Portifolio Johanna Liz dos Santos de Oliveira",
 };
 
 export default function RootLayout({
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
