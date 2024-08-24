@@ -1,8 +1,6 @@
-.project {
-  .project_item {
-    @apply relative;
-    .project_item_overlay {
-      @apply absolute top-0 w-full h-full bg-gradient-to-t from-[#280c25] to-[#4e1849cf]  hover:bg-[#290d26d1] transition flex items-center justify-center text-white text-xl cursor-pointer uppercase;
-    }
-  }
+.project_item {
+  @apply relative;
+}
+.project_item_overlay {
+  @apply absolute top-0 w-full h-full bg-gradient-to-t from-[#280c25] to-[#4e1849cf]  hover:bg-[#290d26d1] transition flex items-center justify-center text-white text-xl cursor-pointer uppercase;
 }

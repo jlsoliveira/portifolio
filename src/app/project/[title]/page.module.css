@@ -7,13 +7,13 @@
     @apply text-primary-100 font-thin text-center w-fit text-4xl relative pb-3 md:mb-12 mb-12;
     &::after {
       @apply absolute bottom-0 w-10 h-1 bg-secondary left-0;
-      content: ' ';
+      content: " ";
     }
   }
   .project_ul {
     @apply my-10;
-    .project_ul_item {
-      @apply flex items-center space-x-3 my-5 hover:text-secondary;
-    }
+  }
+  .project_ul_item {
+    @apply flex items-center space-x-3 my-5 hover:text-secondary;
   }
 }

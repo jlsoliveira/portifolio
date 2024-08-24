@@ -1,6 +1,6 @@
 .button {
   @apply bg-[#f851eb6b] text-white rounded-full flex items-center justify-between w-fit pl-7 uppercase text-base;
-  .button_icon {
-    @apply bg-[#ffffff24] w-[76px] h-[61px] flex items-center justify-center rounded-full ml-5;
-  }
+}
+.button_icon {
+  @apply bg-[#ffffff24] rounded-full w-[76px] h-[61px] flex items-center justify-center ml-5;
 }

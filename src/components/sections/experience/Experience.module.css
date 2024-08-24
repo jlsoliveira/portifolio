@@ -5,9 +5,14 @@
   }
   .experience_title {
     @apply text-primary-100 font-thin text-center w-fit mx-auto text-5xl relative pb-3 md:mb-20 mb-12;
-    &::after {
-      @apply absolute bottom-0 w-10 h-1 bg-secondary left-[36%];
-      content: ' ';
-    }
   }
+}
+.experience_title::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  width: 2.5rem;
+  height: 0.25rem;
+  background-color: #f851eb;
+  left: 36%;
 }
