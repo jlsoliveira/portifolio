@@ -11,6 +11,7 @@ import { useWindowWidth } from "@/hook";
 export function Header() {
   const [openBurger, setOpenBurger] = useState(true);
   const [scrolled, setScrolled] = useState(true);
+  const [targetSection, setTargetSection] = useState<string | null>(null);
   const pathname = usePathname();
   const windowWidth = useWindowWidth();
   const isHomePage = pathname === "/";
@@ -31,18 +32,25 @@ export function Header() {
   ) => {
     e.preventDefault();
 
-    router.push("/");
-
-    const section = document.getElementById(sectionId);
+    if (pathname !== "/") {
+      setTargetSection(sectionId);
+      router.push("/");
+    } else {
+      scrollToSection(sectionId);
+    }
 
     if (windowWidth <= 1024) {
       setOpenBurger(false);
     }
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
     if (section) {
       const elementRect = section.getBoundingClientRect();
       const scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop;
-      const elementTop = elementRect.top + scrollTop;
+      const elementTop = elementRect.top + scrollTop - 50;
 
       window.scrollTo({
         top: elementTop,
@@ -52,6 +60,13 @@ export function Header() {
       history.pushState(null, "", window.location.pathname);
     }
   };
+
+  useEffect(() => {
+    if (targetSection && pathname === "/") {
+      scrollToSection(targetSection);
+      setTargetSection(null);
+    }
+  }, [pathname, targetSection]);
 
   function handleBurger() {
     if (windowWidth <= 1024) {
@@ -135,15 +150,17 @@ export function Header() {
                     </span>
                   </a>
                 </li>
-                {/* <li>
+                <li>
                   <a
                     href="#projects"
-                    onClick={(e) => handleScrollLink(e, 'projects')}
+                    onClick={(e) => handleScrollLink(e, "projects")}
                     className={style.header_container_menu_link}
                   >
-                    <span className={style.header_container_menu_link_span}>Projects</span>
+                    <span className={style.header_container_menu_link_span}>
+                      Projects
+                    </span>
                   </a>
-                </li> */}
+                </li>
                 <li>
                   <a
                     href="#contact"

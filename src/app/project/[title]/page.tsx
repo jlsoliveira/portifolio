@@ -36,14 +36,14 @@ export default function ProjectDetail() {
     <section className={style.project}>
       <div className={style.project_container}>
         <div
-          className="order-2 md:order-1"
+          className={style.project_image}
           data-aos="zoom-in"
           data-aos-duration="550"
         >
           <Image
             src={project.imageDetailUrl}
             alt={project.title}
-            width={480}
+            width={580}
             height={659}
             priority
           />
