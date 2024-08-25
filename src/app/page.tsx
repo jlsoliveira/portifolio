@@ -2,7 +2,14 @@
 
 import "aos/dist/aos.css";
 
-import { AboutMe, Banner, Contact, Experience, Skills } from "@/components";
+import {
+  AboutMe,
+  Banner,
+  Contact,
+  Experience,
+  Projects,
+  Skills,
+} from "@/components";
 
 import AOS from "aos";
 import { useEffect } from "react";
@@ -17,6 +24,7 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Experience />
+      {/* <Projects/> */}
       <Contact />
     </main>
   );
