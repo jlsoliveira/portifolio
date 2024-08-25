@@ -1,7 +1,16 @@
 export function ArrowDown() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="12.119" height="18.755" viewBox="0 0 12.119 18.755">
-      <g id="Grupo_15" data-name="Grupo 15" transform="translate(12.12) rotate(90)">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="12.119"
+      height="18.755"
+      viewBox="0 0 12.119 18.755"
+    >
+      <g
+        id="Grupo_15"
+        data-name="Grupo 15"
+        transform="translate(12.12) rotate(90)"
+      >
         <rect
           id="Retângulo_23"
           data-name="Retângulo 23"

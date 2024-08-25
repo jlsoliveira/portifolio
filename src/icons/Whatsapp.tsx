@@ -8,7 +8,12 @@ export function Whatsapp() {
       height="24"
       viewBox="0 0 24 24"
     >
-      <path id="Caminho_123" data-name="Caminho 123" d="M0,0H24V24H0Z" fill="none" />
+      <path
+        id="Caminho_123"
+        data-name="Caminho 123"
+        d="M0,0H24V24H0Z"
+        fill="none"
+      />
       <path
         id="Caminho_124"
         data-name="Caminho 124"

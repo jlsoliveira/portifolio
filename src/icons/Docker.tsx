@@ -1,6 +1,12 @@
 export function Docker() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 16 16" fill="none">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="60"
+      height="60"
+      viewBox="0 0 16 16"
+      fill="none"
+    >
       <path
         fillRule="nonzero"
         clipRule="nonzero"

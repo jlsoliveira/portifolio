@@ -1,5 +1,5 @@
 .about {
-  @apply py-24;
+  @apply py-24 overflow-x-hidden;
   .about_container {
     @apply xl:w-[80%] px-4 xl:px-0 w-full mx-auto text-xl relative flex flex-wrap lg:flex-nowrap items-center lg:space-x-36;
   }

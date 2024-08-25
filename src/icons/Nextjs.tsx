@@ -1,5 +1,5 @@
-import path from 'path';
-import React from 'react';
+import path from "path";
+import React from "react";
 
 export function Nextjs() {
   return (

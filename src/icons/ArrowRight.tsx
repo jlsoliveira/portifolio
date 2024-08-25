@@ -1,6 +1,11 @@
 export function ArrowRight() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="26.544" height="16.236" viewBox="0 0 26.544 16.236">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="26.544"
+      height="16.236"
+      viewBox="0 0 26.544 16.236"
+    >
       <g id="Grupo_8" data-name="Grupo 8" transform="translate(0 2.206)">
         <rect
           id="Retângulo_23"

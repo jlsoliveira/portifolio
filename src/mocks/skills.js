@@ -22,127 +22,127 @@ import {
   TailwindCss,
   TypeScript,
   VueJs,
-} from '@/icons';
+} from "@/icons";
 
 export const skillsList = [
   {
     id: 0,
-    title: 'React.js',
+    title: "React.js",
     icon: <ReactJS />,
   },
   {
     id: 1,
-    title: 'React Native',
+    title: "React Native",
     icon: <ReactJS />,
   },
   {
     id: 2,
-    title: 'Angular 2+',
+    title: "Angular 2+",
     icon: <AngularJS />,
   },
   {
     id: 3,
-    title: 'Vue.js',
+    title: "Vue.js",
     icon: <VueJs />,
   },
   {
     id: 4,
-    title: 'Ionic 3',
+    title: "Ionic 3",
     icon: <Ionic />,
   },
   {
     id: 5,
-    title: 'Expo',
+    title: "Expo",
     icon: <Expo />,
   },
   {
     id: 6,
-    title: 'JavaScript',
+    title: "JavaScript",
     icon: <JavaScript />,
   },
   {
     id: 7,
-    title: 'TypeScript',
+    title: "TypeScript",
     icon: <TypeScript />,
   },
   {
     id: 8,
-    title: 'Next.js',
+    title: "Next.js",
     icon: <Nextjs />,
   },
   {
     id: 9,
-    title: 'Jest',
+    title: "Jest",
     icon: <Jest />,
   },
   {
     id: 10,
-    title: 'HTML 5',
+    title: "HTML 5",
     icon: <Html />,
   },
   {
     id: 11,
-    title: 'CSS',
+    title: "CSS",
     icon: <Css />,
   },
   {
     id: 12,
-    title: 'TailwindCss',
+    title: "TailwindCss",
     icon: <TailwindCss />,
   },
   {
     id: 13,
-    title: 'Material-ui',
+    title: "Material-ui",
     icon: <Mui />,
   },
   {
     id: 14,
-    title: 'Bootstrap',
+    title: "Bootstrap",
     icon: <Bootstrap />,
   },
   {
     id: 15,
-    title: 'Styled Components',
+    title: "Styled Components",
     icon: <StyledComponents />,
   },
   {
     id: 16,
-    title: 'Less',
+    title: "Less",
     icon: <Less />,
   },
   {
     id: 17,
-    title: 'Shadcn',
+    title: "Shadcn",
     icon: <Shadcn />,
   },
   {
     id: 18,
-    title: 'Node.js',
+    title: "Node.js",
     icon: <NodeJs />,
   },
   {
     id: 19,
-    title: 'GraphQl',
+    title: "GraphQl",
     icon: <GraphQl />,
   },
   {
     id: 20,
-    title: 'Prisma',
+    title: "Prisma",
     icon: <Prisma />,
   },
   {
     id: 21,
-    title: 'Docker',
+    title: "Docker",
     icon: <Docker />,
   },
   {
     id: 22,
-    title: 'Git',
+    title: "Git",
     icon: <Git />,
   },
   {
     id: 23,
-    title: 'Postgres Sql',
+    title: "Postgres Sql",
     icon: <Postgres />,
   },
 ];

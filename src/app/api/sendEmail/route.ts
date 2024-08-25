@@ -19,15 +19,24 @@ export async function POST(request: Request) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { message: "All fields are required." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "hanna.liz.oliveira@hotmail.com",
-      subject: `Contact Form Submission: ${message}`,
-      text: `Name: ${name}\nE-mail: ${email}\nMessage: ${message}`,
+      to: "johanna@precisiondev.com.br",
+      cc: `${email}`,
+      subject: `Precision dev - Contact Johanna`,
+      html: `
+        <h3>Message details</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+        <br/>
+        <p>Best regards,<br/>Johanna Liz dos Santos de Oliveira. <br/> https://precisiondev.com.br/</p>
+      `,
     });
 
     return NextResponse.json({ message: "Email sent successfully!" });
@@ -35,7 +44,7 @@ export async function POST(request: Request) {
     console.error("Error sending email:", error);
     return NextResponse.json(
       { message: "Failed to send email." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

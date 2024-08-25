@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import React, { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
-import { Burger } from '@/icons';
-import Image from 'next/image';
-import style from './Header.module.css';
-import { useWindowWidth } from '@/hook';
+import { Burger } from "@/icons";
+import Image from "next/image";
+import style from "./Header.module.css";
+import { useWindowWidth } from "@/hook";
 
 export function Header() {
   const [openBurger, setOpenBurger] = useState(true);
   const [scrolled, setScrolled] = useState(true);
   const pathname = usePathname();
   const windowWidth = useWindowWidth();
-  const isHomePage = pathname === '/';
+  const isHomePage = pathname === "/";
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -25,10 +25,13 @@ export function Header() {
 
   const router = useRouter();
 
-  const handleScrollLink = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
+  const handleScrollLink = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    sectionId: string,
+  ) => {
     e.preventDefault();
 
-    router.push('/');
+    router.push("/");
 
     const section = document.getElementById(sectionId);
 
@@ -37,15 +40,16 @@ export function Header() {
     }
     if (section) {
       const elementRect = section.getBoundingClientRect();
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
       const elementTop = elementRect.top + scrollTop;
 
       window.scrollTo({
         top: elementTop,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
 
-      history.pushState(null, '', window.location.pathname);
+      history.pushState(null, "", window.location.pathname);
     }
   };
 
@@ -62,19 +66,27 @@ export function Header() {
       setOpenBurger(true);
     }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [windowWidth]);
 
   return (
-    <header className={`${style.header} ${scrolled ? 'bg-primary-100' : ''} ${!isHomePage ? 'bg-primary-100' : ''}`}>
+    <header
+      className={`${style.header} ${scrolled ? "bg-primary-100" : ""} ${!isHomePage ? "bg-primary-100" : ""}`}
+    >
       <div className={style.header_container}>
         <div className={style.header_container_logo}>
-          <a href="#home" onClick={(e) => handleScrollLink(e, 'home')}>
-            <Image src="/logo.svg" alt="Hannal_Liz logo" width={180} height={37} priority />
+          <a href="#home" onClick={(e) => handleScrollLink(e, "home")}>
+            <Image
+              src="/logo.svg"
+              alt="Hannal_Liz logo"
+              width={180}
+              height={37}
+              priority
+            />
           </a>
         </div>
         <button className={style.header_burger} onClick={() => handleBurger()}>
@@ -83,35 +95,44 @@ export function Header() {
         {openBurger && (
           <div>
             <nav className={style.header_container_menu}>
-              <button className={style.header_burger} onClick={() => handleBurger()}>
+              <button
+                className={style.header_burger}
+                onClick={() => handleBurger()}
+              >
                 X
               </button>
               <ul className={`${style.header_container_menu_ul}`}>
                 <li>
                   <a
                     href="#about"
-                    onClick={(e) => handleScrollLink(e, 'about')}
+                    onClick={(e) => handleScrollLink(e, "about")}
                     className={style.header_container_menu_link}
                   >
-                    <span className={style.header_container_menu_link_span}>About</span>
+                    <span className={style.header_container_menu_link_span}>
+                      About
+                    </span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="#skills"
-                    onClick={(e) => handleScrollLink(e, 'skills')}
+                    onClick={(e) => handleScrollLink(e, "skills")}
                     className={style.header_container_menu_link}
                   >
-                    <span className={style.header_container_menu_link_span}>Skills</span>
+                    <span className={style.header_container_menu_link_span}>
+                      Skills
+                    </span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="#experience"
-                    onClick={(e) => handleScrollLink(e, 'experience')}
+                    onClick={(e) => handleScrollLink(e, "experience")}
                     className={style.header_container_menu_link}
                   >
-                    <span className={style.header_container_menu_link_span}>Experience</span>
+                    <span className={style.header_container_menu_link_span}>
+                      Experience
+                    </span>
                   </a>
                 </li>
                 {/* <li>
@@ -126,10 +147,12 @@ export function Header() {
                 <li>
                   <a
                     href="#contact"
-                    onClick={(e) => handleScrollLink(e, 'contact')}
+                    onClick={(e) => handleScrollLink(e, "contact")}
                     className={style.header_container_menu_link}
                   >
-                    <span className={style.header_container_menu_link_span}>Contact</span>
+                    <span className={style.header_container_menu_link_span}>
+                      Contact
+                    </span>
                   </a>
                 </li>
               </ul>

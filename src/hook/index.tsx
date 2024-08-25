@@ -1,2 +1,2 @@
-import useWindowWidth from './useWindowWidth';
+import useWindowWidth from "./useWindowWidth";
 export { useWindowWidth };

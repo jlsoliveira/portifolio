@@ -1,5 +1,5 @@
-import { ArrowDown } from '@/icons';
-import style from './ButtonDownload.module.css';
+import { ArrowDown } from "@/icons";
+import style from "./ButtonDownload.module.css";
 
 interface ButtonDownloadProps {
   name: string;

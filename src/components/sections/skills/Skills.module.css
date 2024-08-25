@@ -6,7 +6,7 @@
       @apply text-white font-thin text-5xl relative pb-3 md:mb-20 mb-16;
       &::after {
         @apply absolute bottom-0 w-10 h-1 bg-secondary left-[36%];
-        content: ' ';
+        content: " ";
       }
     }
     .skills_container_skills {

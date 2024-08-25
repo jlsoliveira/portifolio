@@ -1,30 +1,41 @@
-'use client';
+"use client";
 
-import { Alert, ArrowRight, GitHub, LinkedIn, Sucess, Whatsapp } from '@/icons';
-import { Button, Toast } from '@/components';
+import {
+  Alert,
+  ArrowRight,
+  GitHub,
+  LinkedIn,
+  Spinner,
+  Sucess,
+  Whatsapp,
+} from "@/icons";
+import { Button, Toast } from "@/components";
 
-import axios from 'axios';
-import style from './Contact.module.css';
-import { useState } from 'react';
+import axios from "axios";
+import style from "./Contact.module.css";
+import { useState } from "react";
 
 export function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [sucess, setSucess] = useState('');
-  const [error, setError] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [sucess, setSucess] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-
+    setLoading(true);
     try {
-      await axios.post('/api/sendEmail', { name, email, message });
-      setSucess('Email sent successfully!');
-      setName('');
-      setEmail('');
-      setMessage('');
+      await axios.post("/api/sendEmail", { name, email, message });
+      setSucess("Email sent successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
     } catch (error) {
-      setError('Failed to send email. Please try again.');
+      setError("Failed to send email. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -33,13 +44,25 @@ export function Contact() {
       <div className={style.contact_container}>
         <div className={style.contact_container_box}>
           <div className={style.contact_info}>
-            <h4 className={style.contact_info_title} data-aos="fade-up" data-aos-duration="550">
+            <h4
+              className={style.contact_info_title}
+              data-aos="fade-up"
+              data-aos-duration="550"
+            >
               CONTACT ME
             </h4>
 
             <ul className={style.contact_info_ul}>
-              <li className={style.contact_info_ul_li} data-aos="fade-up" data-aos-duration="550">
-                <a href="https://github.com/jlsoliveira" target="_blank" rel="noopener noreferrer">
+              <li
+                className={style.contact_info_ul_li}
+                data-aos="fade-up"
+                data-aos-duration="550"
+              >
+                <a
+                  href="https://github.com/jlsoliveira"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className={style.contact_info_text}>
                     <div className={style.contact_info_text_icon}>
                       <GitHub />
@@ -48,18 +71,36 @@ export function Contact() {
                   </div>
                 </a>
               </li>
-              <li className={style.contact_info_ul_li} data-aos="fade-up" data-aos-duration="550">
-                <a href="https://www.linkedin.com/in/jlsoliveira/" target="_blank" rel="noopener noreferrer">
+              <li
+                className={style.contact_info_ul_li}
+                data-aos="fade-up"
+                data-aos-duration="550"
+              >
+                <a
+                  href="https://www.linkedin.com/in/jlsoliveira/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className={style.contact_info_text}>
                     <div className={style.contact_info_text_icon}>
                       <LinkedIn />
                     </div>
-                    <p className="break-all">https://www.linkedin.com/in/jlsoliveira/</p>
+                    <p className="break-all">
+                      https://www.linkedin.com/in/jlsoliveira/
+                    </p>
                   </div>
                 </a>
               </li>
-              <li className={style.contact_info_ul_li} data-aos="fade-up" data-aos-duration="550">
-                <a href="https://wa.me/5554981289760" target="_blank" rel="noopener noreferrer">
+              <li
+                className={style.contact_info_ul_li}
+                data-aos="fade-up"
+                data-aos-duration="550"
+              >
+                <a
+                  href="https://wa.me/5554981289760"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className={style.contact_info_text}>
                     <div className={style.contact_info_text_icon}>
                       <Whatsapp />
@@ -70,7 +111,11 @@ export function Contact() {
               </li>
             </ul>
           </div>
-          <div className={style.contact_form} data-aos="zoom-in" data-aos-duration="550">
+          <div
+            className={style.contact_form}
+            data-aos="zoom-in"
+            data-aos-duration="550"
+          >
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className={style.contact_form_label}>Name</label>
@@ -101,9 +146,16 @@ export function Contact() {
                   className={style.contact_form_textarea}
                 />
               </div>
-              <Button type="submit" title="Send Message" icon={<ArrowRight />} />
+              <Button
+                type="submit"
+                title="Send Message"
+                icon={loading ? <Spinner /> : <ArrowRight />}
+                disabled={loading}
+              />
 
-              {sucess && <Toast type="success" message={sucess} icon={<Sucess />} />}
+              {sucess && (
+                <Toast type="success" message={sucess} icon={<Sucess />} />
+              )}
               {error && <Toast type="error" message={error} icon={<Alert />} />}
             </form>
           </div>
