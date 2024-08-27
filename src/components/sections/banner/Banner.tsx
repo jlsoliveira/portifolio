@@ -31,7 +31,7 @@ export function Banner() {
               data-aos="fade-right"
               data-aos-duration="550"
             >
-              <p>Desenvolvedora</p>
+              <p>Developer</p>
               <p
                 className={`${style.banner_container_text_role}  animate-typewriter`}
               >

@@ -273,7 +273,7 @@ export const ProjectList = [
   },
   {
     id: "4",
-    title: "OxDreams",
+    title: "Oxdreams",
     imageUrl: "/OxDreams.jpg",
     imageDetailUrl: "/oxDreams_detail.jpg",
     gitHubUrl: "",
@@ -404,6 +404,116 @@ export const ProjectList = [
           </li>
           <li>
             <p>Jest</p>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    id: "5",
+    title: "Portifolio",
+    imageUrl: "/portifolio.jpg",
+    imageDetailUrl: "/portifolio_detail.jpg",
+    siteUrl: "https://precisiondev.com.br/",
+    gitHubUrl: "https://github.com/jlsoliveira/portifolio",
+    codePenUrl: "",
+    description: (
+      <div>
+        <p style={{ marginBottom: "10px" }}>
+          I developed a personal portfolio website to showcase my skills,
+          projects, and professional background. The goal was to create a clean,
+          modern, and responsive site that reflects my expertise in web
+          development while providing a seamless experience for visitors. I
+          designed the entire layout and user interface in Adobe XD before
+          implementing.
+        </p>
+        <ul style={{ listStyle: "outside", marginLeft: "18px" }}>
+          <li>
+            <p style={{ marginBottom: "10px" }}>
+              Adobe XD: Created the complete design and layout of the portfolio
+              in Adobe XD, ensuring a user-friendly and visually appealing
+              interface that aligns with modern design trends.
+            </p>
+          </li>
+          <li>
+            <p style={{ marginBottom: "10px" }}>
+              React.js and Next.js: Built the frontend using React.js, taking
+              advantage of Next.js for server-side rendering and static site
+              generation. This ensured fast load times and improved SEO.
+            </p>
+          </li>
+          <li>
+            <p style={{ marginBottom: "10px" }}>
+              TypeScript: Leveraged TypeScript to add type safety and enhance
+              the development process, reducing bugs and improving code quality.
+            </p>
+          </li>
+          <li>
+            <p style={{ marginBottom: "10px" }}>
+              Tailwind CSS: Used Tailwind CSS to style the website, creating a
+              modern and visually appealing design. The utility-first approach
+              of Tailwind allowed for rapid development of responsive layouts
+              with minimal custom CSS.
+            </p>
+          </li>
+          <li>
+            <p style={{ marginBottom: "10px" }}>
+              Next.js API for Email Sending: Developed a custom API endpoint
+              within Next.js to handle email submissions from the contact form.
+              This allowed visitors to reach out to me directly through the
+              website, with messages sent securely to my email.
+            </p>
+          </li>
+          <li>
+            <p style={{ marginBottom: "10px" }}>
+              ESLint: Integrated ESLint into the project to maintain consistent
+              code quality and adhere to best practices. This helped ensure that
+              the codebase was clean, readable, and easy to maintain.
+            </p>
+          </li>
+          <li>
+            <p style={{ marginBottom: "10px" }}>
+              Custom Domain Deployment: Deployed the portfolio website to a
+              custom domain, ensuring it was accessible to potential clients and
+              employers. The deployment process involved optimizing the site for
+              performance and ensuring smooth operation on various devices and
+              browsers.
+            </p>
+          </li>
+        </ul>
+        <p style={{ marginBottom: "3px", marginTop: "15px", color: "#4E1849" }}>
+          Technologies Used
+        </p>
+        <ul
+          style={{
+            listStyle: "outside",
+            marginLeft: "18px",
+            marginBottom: "20px",
+          }}
+        >
+          <li>
+            <p>React.js</p>
+          </li>
+          <li>
+            <p>TypeScript</p>
+          </li>
+          <li>
+            <p>Next.js</p>
+          </li>
+          <li>
+            <p>Next.js API for Email Sending</p>
+          </li>
+          <li>
+            <p>TailwindCss</p>
+          </li>
+          <li>
+            <p>ESLint</p>
+          </li>
+          <li>
+            <p>Custom Domain Deployment</p>
+          </li>
+          <li>
+            <p>Adobe XD</p>
           </li>
         </ul>
       </div>
