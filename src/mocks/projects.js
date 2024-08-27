@@ -274,7 +274,7 @@ export const ProjectList = [
   {
     id: "4",
     title: "Oxdreams",
-    imageUrl: "/OxDreams.jpg",
+    imageUrl: "/oxDreams.jpg",
     imageDetailUrl: "/oxDreams_detail.jpg",
     gitHubUrl: "",
     codePenUrl: "",
